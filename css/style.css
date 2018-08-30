@@ -1,0 +1,13 @@
+div{
+    font-size: 18px;
+}
+
+#main_content{
+    width: 83%;
+    min-height: 400px;
+    height: auto;
+    border: 2px solid #666;
+    margin: 20px 0 0 60px;
+    background-color: #fafafa;
+    padding: 50px;
+}
