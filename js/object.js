@@ -8,7 +8,16 @@ let b = 20;
 const obj1 = {
     options : 1,
     name: 'Pupkin',
-    'some string': a + b
+    'some string': a + b,
+    three: {
+        a: 1,
+        b: 2,
+        c: {
+            'str1': 10,
+            str2: 20,
+            str3: 'sdsd'
+        }
+    }
 };
 
 var result = obj;
@@ -65,7 +74,30 @@ person.greet();
 anotherPerson.greet();
 thirdPerson.greet();
 
+console.log('-----------------------');
+console.log('-----------------------');
 
-for (v in obj1){
 
+//
+
+
+function iteration(o) {
+    for (v in o) {
+        if (typeof o[v] == 'object'){
+            console.log(v + ':');
+            iteration(o[v]);
+        }
+        else {
+            console.log(v + ' - ' + o[v]);
+        }
+
+    }
 }
+
+iteration(obj1);
+
+// for (v in obj1){
+//
+//     console.log(v + ' - ' + obj1[v]);
+//
+// }
