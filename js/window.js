@@ -14,6 +14,11 @@ window.onload = function () {
     var wrap = document.getElementById('popup_overlay');
     var closeB = document.getElementById('popup_close');
     closeB.onclick = popupClose;
+
+    var openB = document.getElementById('popupIn');
+    openB.onclick = popup;
+
+    var tIn, tOut;
     
     function popup() {
         wrap.style.display = 'block';
@@ -21,7 +26,6 @@ window.onload = function () {
     }
     
     function popupClose() {
-        // wrap.style.display = 'none';
         popupOut(0);
     }
 
@@ -30,9 +34,10 @@ window.onload = function () {
         var op = (wrap.style.opacity) ? parseFloat(wrap.style.opacity) : 0 ;
 
         if(op < x){
+            clearInterval(tOut); // clear
             op += 0.05;
             wrap.style.opacity = op;
-            setTimeout(function () {
+            tIn = setTimeout(function () {
                 popupIn(x);
             },50)
         }
@@ -43,14 +48,36 @@ window.onload = function () {
         var op = (wrap.style.opacity) ? parseFloat(wrap.style.opacity) : 1 ;
 
         if(op > x){
+            clearInterval(tIn); // clear
             op -= 0.05;
             wrap.style.opacity = op;
-            setTimeout(function () {
+            tOut = setTimeout(function () {
                 popupOut(x);
-            },50)
+            },100)
+        }
+
+        if(wrap.style.opacity == x){
+            wrap.style.display = 'none';
         }
     }
 
     setTimeout(popup, 1000);
+
+    var h1 = document.getElementById('header');
+    h1.onclick = function () {
+      clearTimeout(intStop);
+    };
+
+    function changeColor() {
+        if ( h1.style.color == 'black'){
+            h1.style.color = 'red';
+        }
+        else {
+            h1.style.color = 'black';
+        }
+    }
+
+    var intStop = setInterval(changeColor, 500);
+
 };
 
