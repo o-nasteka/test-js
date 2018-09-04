@@ -1,5 +1,9 @@
 // var myVar = 'Hello World!';
 
+function myOpen(){
+    window.open('http://google.com')
+}
+
 window.onload = function () {
 
     console.log(window.name);
@@ -32,8 +36,15 @@ window.onload = function () {
         // myVar = w1.editMyVar();
         // alert(myVar);
 
-        var fr = document.getElementById('f1');
+        // var fr = document.getElementById('f1');
+        // fr.contentWindow.getAlert();
 
+        // window.frames['f1'].getAlert();
+        // window.frames['f1'].getParentFunc();
+
+        w1.focus(); // document focus
+        // w1.print();  // print document
+        w1.scrollBy(50,50);
     }
 
     var f = document.getElementById('function');
