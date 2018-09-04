@@ -9,19 +9,42 @@
 </head>
 <body>
 
-    <div id="main_content">
+    <!--<div id="main_content">-->
         <!--<div id="clock"></div>-->
         <!--<h1 id="head">Работа с 1 строками с использованием 2 языка 3 Java Script</h1>-->
         <!--<br>-->
-        <p id="result"></p>
+        <!--<p id="result"></p>-->
 
+    <!--</div>-->
+
+    <div id="popup_overlay" class="popup__overlay">
+        <div class="popup">
+            <div id="popup_close" class="popup__close">X</div>
+            <p>Оставьте ваш телефон<br/>и наш консультант свяжется с вами</p>
+            <form id="backPhone" name="backPhone">
+                <input name="telephone" type="Tel" id="telForm" maxlength="20" placeholder="Введите ваш телефон" required=”required” />
+                <button id="telButton" type="submit" form="backPhone">Заказать звонок</button>
+            </form>
+        </div>
     </div>
+
+    <div class="wrap">
+        <div class="karkas">
+
+            <h1 id="header">Объект Window</h1>
+
+            <button id="popupIn">Показать</button>
+
+        </div>
+    </div>
+
 
     <!--<script src="js/scripts.js"></script>-->
     <!--<script src="js/scripts2.js"></script>-->
     <!--<script src="js/string.js"></script>-->
     <!--<script src="js/math.js"></script>-->
-    <script src="js/object.js"></script>
+    <!--<script src="js/object.js"></script>-->
+    <script src="js/window.js"></script>
 
 </body>
 </html>
