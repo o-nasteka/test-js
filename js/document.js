@@ -1,8 +1,12 @@
 window.onload = function () {
     var elId = document.getElementById('stuck_container');
 
+    /**
+     * Get some elements by ID and put it in Object
+     */
+    /*
     function getElements() {
-        var elem = {};
+        var elem = {}; // Object
 
         //Arguments
         for (var i = 0; i < arguments.length; i++){
@@ -24,6 +28,9 @@ window.onload = function () {
 
     // var result = getElements('stuck_container', 'content', 'footer');
     // console.log(result);
+    /////////////////////
+    */
+
 
     // var elname = document.getElementsByName('email');
     // var elname2 = document.getElementsByName('email')[0].style.border = '3px solid red';
@@ -49,6 +56,10 @@ window.onload = function () {
     */
 
     // Get element by class
-
+    var elId = document.getElementById('stuck_container').className;
+    var elClass = document.getElementsByClassName('test test222');
+    console.log(elId);
+    console.log('**************');
+    console.log(elClass);
 
 }
