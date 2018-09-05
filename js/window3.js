@@ -42,8 +42,20 @@ window.onload = function () {
         // window.location.assign('http://google.com');
         // window.location.replace('http://google.com');
         // window.location.reload();
+        // window.location = 'F1.html';
 
-        window.location = 'F1.html';
+        // console.log(history.length);
+
+        // history.back();
+        // history.forward();
+
+        // history.go(-1);
+
+        // console.log(window.navigator);
+
+
+        console.log(window.screen);
+
     }
 
 }
