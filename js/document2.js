@@ -44,5 +44,16 @@ window.onload = function () {
         myLi.previousElementSibling.style.border = '2px solid blue';
 
 
+        console.log(myLi.parentNode.childElementCount);
+
+        console.log(document.forms[0].action = 'http://google.com');
+
+        console.log(document.links[0].href = 'http://google.com');
+
+        console.log(document.querySelector('label.name').style.borderTop="5px solid red");
+
+        // console.log(document.images[0]);
+        document.images[0].setAttribute('width',300);
+
     };
 }
