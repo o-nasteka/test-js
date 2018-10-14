@@ -15,7 +15,28 @@ window.onload = function () {
         var karkas = document.querySelector(".karkas")
 
         newDiv.appendChild(newText);
-        document.querySelector(".wrap").insertBefore(newDiv, karkas);
+        // document.querySelector(".wrap").insertBefore(newDiv, karkas);
+        // karkas.insertBefore(newDiv, null);
+        // karkas.insertBefore(newDiv, document.querySelector("p"));
+        // karkas.insertBefore(document.querySelector("h1"), null);
+
+        var h1 = document.querySelector('h1');
+
+        // karkas.removeChild(h1);
+
+        // karkas.replaceChild(newDiv, h1);
+
+        function r(el){
+            var fr = document.createDocumentFragment();
+            while (el.lastChild) {
+                fr.appendChild(el.lastChild);
+            }
+
+            el.appendChild(fr);
+        }
+
+        r(karkas);
+
         console.log(newDiv);
     }
 }
