@@ -36,6 +36,23 @@ window.onload = function () {
 
         var div = document.querySelector('#content');
         console.log(div.innerText);
+        
+        function textContent(el) {
+            var child, type, s = "";
+
+            for (child = el.firstChild; child != null; child = child.nextSibling) {
+                type = child.nodeType;
+                if(type == 3) {
+                    s += child.nodeValue;
+                }
+                else if(type == 1){
+                    s += textContent(child);
+                }
+            }
+
+            return s;
+        }
+        console.log(textContent(div));
     };
 
 }
